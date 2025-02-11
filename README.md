@@ -45,8 +45,6 @@ chembl-dashboard/
 │── backend/                     # Express.js Backend
 │   ├── server.js                 # Main API Server
 │   ├── db.js                      # PostgreSQL Database Connection
-│   ├── routes/                    # API Routes
-│   ├── models/                    # Database Models
 │   ├── package.json               # Backend Dependencies
 │
 │── frontend/                    # React.js Frontend
@@ -215,6 +213,6 @@ This **ChEMBL Compound Dashboard** is a **powerful tool** for **chemists & resea
 
 👨‍💻 **Bhargavi Chella** – _Full Stack Developer_  
 📩 Email: chellabhargavi2002@gmail.com  
-📌 LinkedIn: [https://www.linkedin.com/in/bhargavichella/]
-📌 Posrtfolio: [https://bhargavi35-portfolio.vercel.app/]
+📌 LinkedIn: [https://www.linkedin.com/in/bhargavichella/] 
+📌 Portfolio: [https://bhargavi35-portfolio.vercel.app/]
 
