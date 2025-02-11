@@ -47,6 +47,7 @@ function CompoundSearch() {
   const [limit, setLimit] = useState(10);
   // const totalRecords = 20; // Assume total records are 20 for now
   const [totalRecords, setTotalRecords] = useState(0);
+  // console.log("compounds", compounds);
 
   useEffect(() => {
     const fetchFilteredCompounds = async () => {
@@ -69,9 +70,11 @@ function CompoundSearch() {
         params.page = page;
         params.limit = limit;
 
-        const data = await fetchCompounds(params);
-        setCompounds(data);
-        setTotalRecords(data.length);
+        const res = await fetchCompounds(params);
+        // console.log(res?.res,'res');
+        
+        setCompounds(res?.data);
+        setTotalRecords(res.length);
       } catch (error) {
         console.error("Error fetching compounds:", error);
         setTotalRecords(0);
@@ -267,7 +270,7 @@ function CompoundSearch() {
                 </TableCell>
               </TableRow>
             ) : (
-              compounds.map((c) => (
+              compounds?.map((c) => (
                 <TableRow key={c.chembl_id}>
                   <TableCell>
                     <Link
